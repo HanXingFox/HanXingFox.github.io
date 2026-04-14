@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64图片显示示例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .description {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #7f8c8d;
+        }
+        
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .image-box {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .image-box h3 {
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        
+        .base64-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .code-container {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        
+        .info-box {
+            background: #e8f4fc;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .info-box h3 {
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Base64图片显示示例</h1>
+        <p class="description">以下图片直接使用Base64编码数据嵌入在HTML中，无需外部文件。</p>
+        
+        <div class="image-container">
+            <div class="image-box">
+                <h3>示例图片 1</h3>
+                <img class="base64-image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzM0OThEQiIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIGZpbGw9IiNFRkY1RjUiLz48cGF0aCBkPSJNNzAgMTAwIEwxMDAgNzAgTDEzMCAxMDAgTDEwMCAxMzBaIiBmaWxsPSIjRkYzQjcyIi8+PC9zdmc+" alt="Base64图片1">
+                <div class="code-container">
+                    &lt;img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzM0OThEQiIvPjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iNDAiIGZpbGw9IiNFRkY1RjUiLz48cGF0aCBkPSJNNzAgMTAwIEwxMDAgNzAgTDEzMCAxMDAgTDEwMCAxMzBaIiBmaWxsPSIjRkYzQjcyIi8+PC9zdmc+" alt="Base64图片1"&gt;
+                </div>
+            </div>
+            
+            <div class="image-box">
+                <h3>示例图片 2</h3>
+                <img class="base64-image" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzJFRjc0RCIvPjxwb2x5Z29uIHBvaW50cz0iMTAwLDMwIDEzMCw3MCA3MCw3MCIgZmlsbD0iI0ZGNENBQyIvPjxyZWN0IHg9Ijc1IiB5PSIxMDAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI0ZGNENBQyIvPjwvc3ZnPg==" alt="Base64图片2">
+                <div class="code-container">
+                    &lt;img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzJFRjc0RCIvPjxwb2x5Z29uIHBvaW50cz0iMTAwLDMwIDEzMCw3MCA3MCw3MCIgZmlsbD0iI0ZGNENBQyIvPjxyZWN0IHg9Ijc1IiB5PSIxMDAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI0ZGNENBQyIvPjwvc3ZnPg==" alt="Base64图片2"&gt;
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>Base64图片使用说明</h3>
+            <p>Base64编码的图片可以直接嵌入到HTML中，使用格式：</p>
+            <p><code>&lt;img src="data:image/[格式];base64,[编码数据]" alt="描述"&gt;</code></p>
+            <p>优点：减少HTTP请求，适合小图标和简单图形。</p>
+            <p>缺点：编码后数据量增加约33%，不适合大图片。</p>
+        </div>
+    </div>
+</body>
+</html>
